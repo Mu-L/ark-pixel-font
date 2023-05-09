@@ -6,7 +6,6 @@ from jinja2 import Environment, FileSystemLoader
 from configs import path_define
 from configs.font_config import FontConfig
 from configs.git_deploy_config import GitDeployConfig
-from utils.unidata_util import UnidataDB
 
 build_random_key = random.random()
 
@@ -48,8 +47,6 @@ locale_map = {
 }
 
 font_formats = ['otf', 'woff2', 'ttf']
-
-unidata_db = UnidataDB(os.path.join(path_define.unidata_dir, 'Blocks.txt'))
 
 template_env = Environment(
     trim_blocks=True,
